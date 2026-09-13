@@ -10,6 +10,8 @@ departments, with the assignment history to match. That is enough volume for the
 be real queries — "which department has the most open tickets for which software" against 4,500 rows
 is a GROUP BY that has to be written properly, not a toy.
 
+![Manager view: assigning tickets, running the salary report, and browsing the ticket queue](assets/screenshots/ticket-management-system-1.png)
+
 ## What it does
 
 **One login, three interfaces.** You sign in with a username and password; the server works out which
@@ -134,7 +136,7 @@ curl http://localhost:8080/api/technician/maxSalary/3     # {"salary":"149957.00
 curl http://localhost:8080/api/login/brittanyenglish/1
 ```
 
-![The login screen](docs/screenshot-login.png)
+![The closed-ticket queue, served from the seeded database](assets/screenshots/ticket-management-system-2.png)
 
 ## Project layout
 
@@ -146,7 +148,7 @@ server/          Express API
 web/             frontend — index.html, script.js, styles.css, served statically by Express
 db/
 └── schema-and-seed.sql   7 tables plus ~12,000 seeded rows; this is how you stand the app up
-docs/            screenshots
+assets/screenshots/   screenshots of the running app
 ```
 
 The seed data is synthetic throughout — generated names, emails, phone numbers and salaries. No real
@@ -154,6 +156,6 @@ personal data is in this repository.
 
 ## Credits
 
-Built as a team project.
+Built with a team of 5.
 
 *Originally built as a course project at Western University.*
