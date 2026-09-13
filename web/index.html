@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ticket Management System</title>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="nav">
+        <div class="nav__container">
+            <img src="ticket.png" alt="Image Load Error" width="175" height="75"> -->
+            <div class="nav__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav__menu">
+                <li class="nav__item" id="assignNav">
+                    <a href="#top" class="nav__links" id="assign">Assign Ticket</a>
+                </li>
+                <li class="nav__item" id="salaryNav">
+                    <a href="#technician-salary" class="nav__links" id="maxSal">Find Max Salary</a>
+                </li>
+                <li class="nav__item" id="createNav">
+                    <a href="#create" class="nav__links" id="createTicket">Create Ticket</a>
+                </li>
+                <li class="nav__item" id="editNav">
+                    <a href="#edit-ticket" class="nav__links" id="editTicket">Edit Ticket</a>
+                </li>
+                <li class="nav__item" id="openNav">
+                    <a href="#open" class="nav__links" id="opened">Open Tickets</a>
+                </li>
+                <li class="nav__item" id="closedNav">
+                    <a href="#closed-tickets" class="nav__links" id="closed">Closed Tickets</a>
+                </li>
+                <li class="nav__btn" id="loginNav">
+                    <a href="#top" type="button" class="button" id="login">Login</a>
+                </li>
+                <li class="nav__btn" id="signoutNav">
+                    <a href="#top" class="button" id="logout" onclick="logout()">Sign Out</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <div id="main">
+        <div class="login" id="loginBox">
+            <h3>Login</h3>
+            <input type="text" id="usernameInput" placeholder="Username"> <br> <br>
+            <input type="text" id="passwordInput" placeholder="Password"> <br> <br>
+            <button type="button" id="loginSubmit" onclick="login()">Login</button>
+            <p id="loginFeedback"></p>
+        </div>
+
+        <div class="assign-ticket" id="assign-ticket">
+            <h3>Assign Ticket</h3>
+            <input type="text" id="managerIDInput" placeholder="Manager ID"> <br> <br>
+            <input type="text" id="technicianIDInput" placeholder="Technician ID"> <br><br>
+            <input type="text" id="ticketIDInput" placeholder="Ticket ID"> <br><br>
+            <button type="button" id="ticketAssignSubmit" onclick="assignTicket()">Submit</button>
+            <p id="assignTicketFeedback"></p>
+        </div>
+
+        <div class="technician-salary" id="technician-salary">
+            <h3>Find Max Salary</h3>
+            <input type="text" id="levelInput" placeholder="Level"> <br><br>
+            <button type="button" id="technicianSalarySubmit" onclick="technicianSalary()">Submit</button>
+            <p id="technicianSalaryFeedback"></p>
+        </div>
+
+        <div class="create-ticket" id="create-ticket">
+            <h3 id="create">Create Ticket</h3>
+            <input type="text" id="userIDInput" placeholder="User ID"> <br><br>
+            <input type="text" id="issuerIDInput" placeholder="Issuer ID"> <br><br>
+            <input type="text" id="subjectInput" placeholder="Subject"> <br><br>
+            <input type="text" id="descriptionInput" placeholder="Description"> <br><br>
+            <input type="text" id="softwareInput" placeholder="Software"> <br><br>
+            <button type="button" id="ticketAssignSubmit" onclick="createTicket()">Submit</button>
+            <p id="createTicketFeedback"></p>
+        </div>
+
+        <div class="edit-ticket" id="edit-ticket">
+            <h3 id="edit">Edit Ticket</h3>
+            <input type="text" id="technicianIDInput2" placeholder="Technician ID"> <br><br>
+            <input type="text" id="ticketIDInput2" placeholder="Ticket ID"> <br><br>
+            <input type="text" id="stateInput" placeholder="State"> <br><br>
+            <input type="text" id="techNotesInput" placeholder="Tech Notes"> <br><br>
+            <button type="button" id="ticketEditSubmit" onclick="editTicket()">Submit</button>
+            <p id="editTicketFeedback"></p>
+        </div>
+
+        <div class="view-open-tickets" id="view-open-tickets">
+            <h3 id="edit">Displaying Open and In-Progress Tickets For You</h3>
+            <table id="open-tickets">
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Subject</th>
+                    <th>Description</th>
+                    <th>Software</th>
+                    <th>Date Opened</th>
+                    <th>Data Closed</th>
+                    <th>State</th>
+                    <th>Priority Level</th>
+                    <th>Technician Notes</th>
+                    <th>User ID</th>
+                    <th>Issuer ID</th>
+                    <th>Technician ID</th>
+                </tr>
+            </table>
+            <p id="openTicketFeedback"></p>
+        </div>
+
+        <div class="display-ticket-numbers" id="display-ticket-numbers">
+            <h3 id="open">Displaying Open Tickets Based On Department</h3>
+            <table id="inprogress-tickets">
+                <tr>
+                    <th>Department</th>
+                    <th># of Open Tickets</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="display-closed-tickets" id="display-closed-tickets">
+            <h3 id="edit">Displaying Closed Tickets</h3>
+            <table id="closed-tickets">
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Subject</th>
+                    <th>Description</th>
+                    <th>Software</th>
+                    <th>Date Opened</th>
+                    <th>Data Closed</th>
+                    <th>State</th>
+                    <th>Priority Level</th>
+                    <th>Technician Notes</th>
+                    <th>User ID</th>
+                    <th>Issuer ID</th>
+                    <th>Technician ID</th>
+                </tr>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>

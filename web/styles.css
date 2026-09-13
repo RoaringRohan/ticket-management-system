@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #b0c4de;
+}
+
+#main {
+    text-align: center;
+}
+
+#logout {
+    /* display: inline-block;
+    white-space: nowrap; */
+    text-align: left;
+
+}
+
+input {
+    text-align: center;
+    border-radius: 5cm;
+    height: 1cm;
+    width: 5cm;
+}
+
+h3 {
+    padding: 0.5cm;
+}
+
+.nav {
+    background: #000000;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.main-content {
+    background-color: rgb(122, 231, 231);
+    padding: 30px;
+    border: 60px;
+    text-align: center;
+
+}
+
+.login {
+    padding: 30px;
+}
+
+.assign-ticket {
+    padding: 30px;
+}
+
+.technician-salary {
+    padding: 30px;
+}
+
+.create-ticket {
+    padding: 30px;
+}
+
+.edit-ticket {
+    padding: 30px;
+}
+
+.footer {
+    min-height: 15%;
+    width: 100%;
+    font-family: Poppins;
+    background-color: rgb(19, 179, 179);
+    padding-bottom: 1%;
+    padding-top: 1%;
+    text-align: center;
+    color: aquamarine;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav__item {
+    height: 80px;
+    width: 200px;
+}
+
+.nav__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.nav__btn {
+    width: 100%;
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0px;
+    height: 100%;
+    width: 30%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #833ab4;
+    background: -webkit-linear-gradient(to right, #3494e6, #EC6EAD, #3494e6);
+    background: linear-gradient(to right, #3494e6, #EC6EAD, #3494e6);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+button {
+    background: linear-gradient(to right, #3494e6, #af6eec, #3494e6);
+    padding: 10px 20px;
+    height: 100%;
+    width: 10%;
+    border: none;
+    border-radius: 0.25cm;
+}
+
+.nav__links:hover {
+    color: #e248c0;
+    transition: all 0.3s ease;
+}
+
+p {
+    padding-top: 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table-body {
+    height: 300px;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+
+.display-closed-tickets{
+    overflow-y: scroll;
+    height:400px;
+}
